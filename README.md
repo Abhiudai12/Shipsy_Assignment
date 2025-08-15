@@ -35,13 +35,18 @@ A beginner-friendly mini app inspired by Shipsy. It includes:
    - username: **admin**
    - password: **admin123**
 
-## Deploy to Render
-1. Push this folder to a GitHub repo.
-2. On Render, create a new **Web Service** from your repo.
-3. Environment:
-   - Build Command: `pip install -r requirements.txt`
-   - Start Command: `gunicorn app:app`
-   - (Free plan is fine)
+
+## Deployed to Render
+
+The application is live and accessible at the following link:  
+[Shipment App on Render](https://abhi-shipment-app.onrender.com/)
+
+**Test Credentials**:  
+- **Username:** `admin`  
+- **Password:** `admin123`  
+
+Use these credentials to log in and explore the application's features.
+
 
 ## Docs
 - `docs/architecture.md`: overview & schema
