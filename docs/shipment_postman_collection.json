@@ -1,0 +1,223 @@
+{
+    "info": {
+        "_postman_id": "eb7ba965-8372-459f-a55f-e09942538384",
+        "name": "Shipment App API",
+        "description": "StartFragmentCRUD API documentation for Shipment Management AppEndFragment",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "_exporter_id": "47591132",
+        "_collection_link": "https://shahiabhiudai-8426249.postman.co/workspace/Abhiudai-Shahi's-Workspace~1f823a31-a8ac-4065-8cb2-adbda18e5117/collection/47591132-eb7ba965-8372-459f-a55f-e09942538384?action=share&source=collection_link&creator=47591132"
+    },
+    "item": [
+        {
+            "name": "Login",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "urlencoded",
+                    "urlencoded": [
+                        {
+                            "key": "username",
+                            "value": "admin",
+                            "type": "text"
+                        },
+                        {
+                            "key": "password",
+                            "value": "admin123",
+                            "type": "text"
+                        }
+                    ]
+                },
+                "url": {
+                    "raw": "https://abhi-shipment-app.onrender.com/login",
+                    "protocol": "https",
+                    "host": [
+                        "abhi-shipment-app",
+                        "onrender",
+                        "com"
+                    ],
+                    "path": [
+                        "login"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Get Shipments",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "https://abhi-shipment-app.onrender.com/shipments",
+                    "protocol": "https",
+                    "host": [
+                        "abhi-shipment-app",
+                        "onrender",
+                        "com"
+                    ],
+                    "path": [
+                        "shipments",
+                        ""
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Create Shipment",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "urlencoded",
+                    "urlencoded": [
+                        {
+                            "key": "name",
+                            "value": "Test Shipment",
+                            "type": "text"
+                        },
+                        {
+                            "key": "origin",
+                            "value": "CityA",
+                            "type": "text"
+                        },
+                        {
+                            "key": "destination",
+                            "value": "CityB",
+                            "type": "text"
+                        },
+                        {
+                            "key": "distance_km",
+                            "value": "500",
+                            "type": "text"
+                        },
+                        {
+                            "key": "service_level",
+                            "value": "Standard",
+                            "type": "text"
+                        },
+                        {
+                            "key": "status",
+                            "value": "Pending",
+                            "type": "text"
+                        }
+                    ]
+                },
+                "url": {
+                    "raw": "https://abhi-shipment-app.onrender.com/shipments/new",
+                    "protocol": "https",
+                    "host": [
+                        "abhi-shipment-app",
+                        "onrender",
+                        "com"
+                    ],
+                    "path": [
+                        "shipments",
+                        "new"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Edit Shipment",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "urlencoded",
+                    "urlencoded": [
+                        {
+                            "key": "name",
+                            "value": " Test Shipment",
+                            "type": "text"
+                        },
+                        {
+                            "key": "origin",
+                            "value": " CityA",
+                            "type": "text"
+                        },
+                        {
+                            "key": "destination",
+                            "value": " CityB",
+                            "type": "text"
+                        },
+                        {
+                            "key": "distance_km",
+                            "value": " 500",
+                            "type": "text"
+                        },
+                        {
+                            "key": "service_level",
+                            "value": " Standard",
+                            "type": "text"
+                        },
+                        {
+                            "key": "status",
+                            "value": " Pending",
+                            "type": "text"
+                        }
+                    ]
+                },
+                "url": {
+                    "raw": "https://abhi-shipment-app.onrender.com/shipments/1/edit",
+                    "protocol": "https",
+                    "host": [
+                        "abhi-shipment-app",
+                        "onrender",
+                        "com"
+                    ],
+                    "path": [
+                        "shipments",
+                        "1",
+                        "edit"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Delete Shipment",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                    "raw": "https://abhi-shipment-app.onrender.com/shipments/1/delete",
+                    "protocol": "https",
+                    "host": [
+                        "abhi-shipment-app",
+                        "onrender",
+                        "com"
+                    ],
+                    "path": [
+                        "shipments",
+                        "1",
+                        "delete"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Logout",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "https://abhi-shipment-app.onrender.com/logout",
+                    "protocol": "https",
+                    "host": [
+                        "abhi-shipment-app",
+                        "onrender",
+                        "com"
+                    ],
+                    "path": [
+                        "logout"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+}
