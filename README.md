@@ -1,4 +1,4 @@
-# Shipment Management System (Flask)
+# Abhi's Shipment Management System (Flask)
 
 A beginner-friendly mini app inspired by Shipsy. It includes:
 - Username/password login (Flask-Login + bcrypt)
@@ -44,6 +44,23 @@ The application is live and accessible at the following link:
 **Test Credentials**:  
 - **Username:** `admin`  
 - **Password:** `admin123`  
+
+## API Documentation (Postman)
+
+A Postman collection is included to test the live API endpoints of the Shipment App.  
+You can import it into Postman to explore and run the APIs without typing URLs manually.
+
+- **Postman Collection:** [`/docs/shipment_postman_collection.json`](docs/shipment_postman_collection.json)
+
+### How to Import into Postman
+1. Open Postman (free download: [https://www.postman.com/downloads/](https://www.postman.com/downloads/)).
+2. Click **Import** (top left).
+3. Select the file `shipment_postman_collection.json` from the `/docs` folder,  
+   or copy the GitHub **Raw** file link and paste it in Postman Import.
+4. Use the provided requests to test:
+   - **Login:** `admin` / `admin123`
+   - CRUD operations
+   - Filters & pagination
 
 Use these credentials to log in and explore the application's features.
 
