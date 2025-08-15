@@ -69,7 +69,8 @@ Use these credentials to log in and explore the application's features.
 
 
 ## Docs
+- `docs/video.md`: link your 3–5 min demo video [youtube](https://youtu.be/xyuApmyTefw)
 - `docs/architecture.md`: overview & schema
 - `docs/ai_prompts.md`: put at least 6 Gemini CLI prompts + outcomes
 - `docs/commits.md`: paste hourly commit screenshots
-- `docs/video.md`: link your 3–5 min demo video
+
