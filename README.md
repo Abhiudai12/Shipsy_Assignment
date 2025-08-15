@@ -1,5 +1,8 @@
 # Abhi's Shipment Management System (Flask)
 
+![Shipment App Screenshot](Shipment_app_screenshot.png)
+
+
 A beginner-friendly mini app inspired by Shipsy. It includes:
 - Username/password login (Flask-Login + bcrypt)
 - Shipments CRUD (Create, Read, Update, Delete)
