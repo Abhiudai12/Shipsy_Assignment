@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3 class="mb-3">{{ 'Edit Shipment' if shipment else 'New Shipment' }}</h3>
+<form method="POST">
+  <div class="row g-3">
+    <div class="col-md-6">
+      <label class="form-label">Shipment Name</label>
+      <input class="form-control" type="text" name="name" value="{{ shipment.name if shipment else '' }}" required>
+    </div>
+    <div class="col-md-3">
+      <label class="form-label">Status</label>
+      <select class="form-select" name="status" required>
+        {% for s in STATUS_CHOICES %}
+          <option value="{{ s }}" {% if shipment and shipment.status == s %}selected{% endif %}>{{ s }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div class="col-md-3 d-flex align-items-end">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" name="is_fragile" {% if shipment and shipment.is_fragile %}checked{% endif %}>
+        <label class="form-check-label">Is Fragile?</label>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <label class="form-label">Distance (km)</label>
+      <input class="form-control" type="number" min="0" name="distance_km" value="{{ shipment.distance_km if shipment else 0 }}" required>
+    </div>
+    <div class="col-md-3">
+      <label class="form-label">Service Level</label>
+      <select class="form-select" name="service_level" required>
+        {% for s in SERVICE_CHOICES %}
+          <option value="{{ s }}" {% if shipment and shipment.service_level == s %}selected{% endif %}>{{ s }}</option>
+        {% endfor %}
+      </select>
+    </div>
+  </div>
+  <div class="mt-3">
+    <button class="btn btn-primary" type="submit">{{ 'Save Changes' if shipment else 'Create Shipment' }}</button>
+    <a class="btn btn-secondary" href="{{ url_for('shipment.list_shipments') }}">Cancel</a>
+  </div>
+</form>
+<hr/>
+<p class="text-muted">
+  <strong>Calculated field:</strong> <code>estimated_days = ceil(distance_km / daily_km)</code>, where daily_km is 200 (Economy), 300 (Standard), 450 (Express).
+</p>
+{% endblock %}
